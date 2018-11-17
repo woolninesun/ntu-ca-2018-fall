@@ -1,0 +1,67 @@
+$date
+	Wed Oct 31 16:17:31 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 8 ! data_out [7:0] $end
+$var reg 3 " c [2:0] $end
+$var reg 8 # src_a [7:0] $end
+$var reg 8 $ src_b [7:0] $end
+$scope module ALU_instance $end
+$var wire 3 % c [2:0] $end
+$var wire 8 & src_a [7:0] $end
+$var wire 8 ' src_b [7:0] $end
+$var reg 8 ( data_out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1010101 (
+b11010 '
+b1010101 &
+b0 %
+b11010 $
+b1010101 #
+b0 "
+b1010101 !
+$end
+#50
+b1101111 !
+b1101111 (
+b1 "
+b1 %
+#100
+b111011 !
+b111011 (
+b10 "
+b10 %
+#150
+b10000 !
+b10000 (
+b11 "
+b11 %
+#200
+b1011111 !
+b1011111 (
+b100 "
+b100 %
+#250
+b1001111 !
+b1001111 (
+b101 "
+b101 %
+#300
+b1010101 !
+b1010101 (
+b110 "
+b110 %
+#350
+b111 "
+b111 %
+#400

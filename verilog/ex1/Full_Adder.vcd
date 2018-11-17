@@ -1,0 +1,107 @@
+$date
+	Wed Oct 31 14:12:25 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module t_Full_Adder $end
+$var wire 1 ! sum $end
+$var wire 1 " cout $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$var reg 1 % ci $end
+$scope module FA_1 $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 % ci $end
+$var wire 1 ! sum $end
+$var wire 1 " cout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#50
+1!
+1#
+#100
+0#
+1$
+#150
+0!
+1"
+1#
+#200
+0"
+1!
+0#
+0$
+1%
+#250
+0!
+1"
+1#
+#300
+0#
+1$
+#350
+1!
+1#
+#400
+0"
+0!
+0#
+0$
+0%
+#450
+1!
+1#
+#500
+0#
+1$
+#550
+0!
+1"
+1#
+#600
+0"
+1!
+0#
+0$
+1%
+#650
+0!
+1"
+1#
+#700
+0#
+1$
+#750
+1!
+1#
+#800
+0"
+0!
+0#
+0$
+0%
+#850
+1!
+1#
+#900
+0#
+1$
+#950
+0!
+1"
+1#
+#1000
