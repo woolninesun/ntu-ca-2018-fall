@@ -1,0 +1,3 @@
+[submodule "project1"]
+      path = project1
+      url = git@github.com:WooLNinesun/CA2018FALL_Project1.git
