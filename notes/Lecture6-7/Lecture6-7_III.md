@@ -106,7 +106,7 @@ Computer Architecture Lecture 6-7
     *   這樣的概念叫做VLIW(very long instruction word)
 *   Compiler 要偵測避免 hazard
     *   把 instruction 重新排列並包成 issue packets 時避免會造成 hazard 的順序
-    *   同個 packets 裡，同時在跑的 instruction 要互相 independent，不然就會搶資源或造成data hazard
+    *   同個 packets 裡，同時在跑的 instruction 要互相獨立，不然就會搶資源或造成data hazard
     *   在不同的 packets 之間，可以有 dependency，但這部份根據不同的 ISA 會有不同的設計。
     *   有時候要放入 nop (不做任何動作)
 
@@ -146,11 +146,11 @@ load $s2, 0($t0)
 >
 >   ```assembly
 >   Loop:
->   	lw 	 $t0, 0($s1) 		# $t0=array element
->   	addu $t0, $t0, $s2 		# add scalar in $s
->   	sw 	 $t0, 0($s1) 		# store result
->   	addi $s1, $s1,–4 		# decrement pointer
->   	bne  $s1, $zero, Loop 	# branch $s1 != 0
+>   	lw    $t0,  0($s1)          # $t0=array element
+>   	addu  $t0,  $t0,    $s2     # add scalar in $s
+>   	sw    $t0,  0($s1)          # store result
+>   	addi  $s1,  $s1,    –4      # decrement pointer
+>   	bne   $s1,  $zero,  Loop    # branch $s1 != 0
 >   ```
 >
 >   |       | ALU/branch             | Load/store       | cycle |
@@ -214,7 +214,7 @@ CPU 每個 cycle 會決定 issue 的對象。
 
 讓 cpu 可以不照順序執行 instruction 以避免 stall
 
-但是會把資料**照順序存回 **register (比如說在stall的時候就先處理無關的instruction)
+但是會把資料**照順序存回** register (比如說在stall的時候就先處理無關的instruction)
 
 >   #### Example:
 >
@@ -247,7 +247,7 @@ CPU 每個 cycle 會決定 issue 的對象。
 * Reservation station 和 commit unit 在 reorder buffer 時，自動達到了register renaming。
 
 
-* 當一個 instruction 被 issue 到 reservation station 的時候，如果 instruction 的 operands 在 register 或 reorder buffer 裡可以被找到也可以被存取的話，把它複制到 reservation station，並且標明那個 register 已經無用可以被複寫。如果 operands 無法存取(unavailable)的話，有一個 function unit 會把該給的值給 reservation unit，而r egister 裡面的值需不需要更新就要看指令。
+* 當一個 instruction 被 issue 到 reservation station 的時候，如果 instruction 的 operands 在 register 或 reorder buffer 裡可以被找到也可以被存取的話，把它複制到 reservation station，並且標明那個 register 已經無用可以被複寫。如果 operands 無法存取(unavailable)的話，有一個 function unit 會把該給的值給 reservation unit，而 register 裡面的值需不需要更新就要看指令。
 
 * dynamically scheduled 的 speculation:
 
